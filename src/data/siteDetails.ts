@@ -1,9 +1,9 @@
 export const siteDetails = {
-    siteName: 'Finwise',
-    siteUrl: 'https://finwise-omega.vercel.app/',
+    siteName: 'GeoMuse',
+    siteUrl: 'https://geomuse.vercel.app/',
     metadata: {
-        title: 'Finwise - Next.js and Tailwind CSS Landing Page Template',
-        description: 'Finwise empowers businesses with cutting-edge technology solutions to drive success and efficiency.',
+        title: 'GeoMuse - Discover Your Next Adventure',
+        description: 'GeoMuse is an AI-powered app to help you discover your next adventure.',
     },
     language: 'en-us',
     locale: 'en-US',

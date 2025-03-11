@@ -1,7 +1,6 @@
-import { ctaDetails } from "@/data/cta"
+'use client'
 
-import AppStoreButton from "./AppStoreButton"
-import PlayStoreButton from "./PlayStoreButton"
+import { ctaDetails } from "@/data/cta"
 
 const CTA: React.FC = () => {
     return (
@@ -18,8 +17,12 @@ const CTA: React.FC = () => {
                         <p className="mx-auto max-w-xl md:px-5">{ctaDetails.subheading}</p>
 
                         <div className="mt-4 flex flex-col sm:flex-row items-center sm:gap-4">
-                        <AppStoreButton />
-                        <PlayStoreButton />
+                            <button 
+                                className="bg-white text-black px-8 py-3 rounded-full font-medium hover:bg-gray-200 transition-colors"
+                                onClick={() => window.open('https://getwaitlist.com/waitlist/23583', '_blank')}
+                            >
+                                Join The Waitlist
+                            </button>
                         </div>
                     </div>
                 </div>

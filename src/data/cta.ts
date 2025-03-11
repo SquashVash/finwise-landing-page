@@ -1,6 +1,6 @@
 export const ctaDetails = {
-    heading: 'Join Over 1 Million Users To Transform Your Finances',
-    subheading: 'Your journey to financial freedom starts here. Download Finwise today and take the first step towards a brighter financial future!',
+    heading: 'Join The Waitlist To Get Early Access',
+    subheading: 'Discover hidden gems tailored to your unique tastes. Join GeoMuse today and start exploring the world like never before!',
     appStoreUrl: '#',
     googlePlayUrl: '#'
 }
