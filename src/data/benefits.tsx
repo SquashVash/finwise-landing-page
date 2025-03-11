@@ -1,4 +1,4 @@
-import { FiMessageCircle, FiZap, FiSearch, FiBookmark, FiMap, FiNavigation, FiShield, FiEyeOff, FiSettings } from "react-icons/fi";
+import { FiMessageCircle, FiZap, FiSearch, FiBookmark, FiMap, FiNavigation, } from "react-icons/fi";
 
 import { IBenefit } from "@/types"
 
