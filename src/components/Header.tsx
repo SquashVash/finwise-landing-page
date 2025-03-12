@@ -22,15 +22,15 @@ const Header: React.FC = () => {
             <Container className="!px-0">
                 <nav className="shadow-md md:shadow-none bg-white md:bg-transparent mx-auto flex justify-between items-center py-2 px-5 md:py-10">
                     {/* Logo */}
-                    <Link href="/" className="flex items-center gap-2">
+                    <Link href="/" className="flex items-center gap-2 group">
                         <Image 
                             src="/favicon.ico"
                             alt="Logo"
                             width={28}
                             height={28}
-                            className="min-w-fit"
+                            className="min-w-fit transition-transform duration-300 group-hover:scale-110"
                         />
-                        <span className="manrope text-xl font-semibold text-foreground cursor-pointer">
+                        <span className="manrope text-xl font-semibold text-foreground cursor-pointer group-hover:text-primary transition-colors">
                             {siteDetails.siteName}
                         </span>
                     </Link>
@@ -39,13 +39,13 @@ const Header: React.FC = () => {
                     <ul className="hidden md:flex space-x-6">
                         {menuItems.map(item => (
                             <li key={item.text}>
-                                <Link href={item.url} className="text-foreground hover:text-foreground-accent transition-colors">
+                                <Link href={item.url} className="text-foreground hover:text-foreground-accent transition-colors font-bold">
                                     {item.text}
                                 </Link>
                             </li>
                         ))}
                         <li>
-                            <Link href="#cta" className="text-black bg-primary hover:bg-primary-accent px-8 py-3 rounded-full transition-colors">
+                            <Link href="#cta" className="text-black bg-primary hover:bg-primary-accent px-8 py-3 rounded-full transition-colors font-bold">
                                 Join The Waitlist
                             </Link>
                         </li>
@@ -85,13 +85,13 @@ const Header: React.FC = () => {
                     <ul className="flex flex-col space-y-4 pt-1 pb-6 px-6">
                         {menuItems.map(item => (
                             <li key={item.text}>
-                                <Link href={item.url} className="text-foreground hover:text-primary block" onClick={toggleMenu}>
+                                <Link href={item.url} className="text-foreground hover:text-primary block font-bold" onClick={toggleMenu}>
                                     {item.text}
                                 </Link>
                             </li>
                         ))}
                         <li className="flex justify-center">
-                            <Link href="#cta" className="text-black bg-primary hover:bg-primary-accent px-5 py-2 rounded-full block w-fit" onClick={toggleMenu}>
+                            <Link href="#cta" className="text-black bg-primary hover:bg-primary-accent px-5 py-2 rounded-full block w-fit font-bold" onClick={toggleMenu}>
                                 Join The Waitlist
                             </Link>
                         </li>
