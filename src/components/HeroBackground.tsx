@@ -16,18 +16,18 @@ const HeroBackground: React.FC = () => {
                 <div className="absolute inset-0 bg-black/30 z-10"></div>
                 <div className="absolute inset-0 h-full w-full bg-[#f0f4ff]">
                     <div className="relative w-[200%] sm:w-[140%] left-1/2 -translate-x-[40%] -translate-y-[5%] rotate-[-6deg]">
-                        <div className="grid grid-cols-4 gap-x-1 gap-y-1 sm:gap-x-2 sm:gap-y-2 md:gap-4 overflow-hidden h-[200vh]">
-                            {cities.map((city, index) => (
+                        <div className="grid grid-cols-4 gap-x-1 gap-y-1 sm:gap-x-2 sm:gap-y-2 md:gap-4 overflow-hidden h-[400vh]">
+                            {[...cities, ...cities].map((city, index) => (
                                 <div
                                     key={`scroll-${index}-${city}`}
                                     className={`rounded-2xl border-2 border-gray-200 
                                              flex items-center justify-center text-xl font-semibold 
                                              text-white shadow-lg hover:opacity-90 transition-opacity
                                              duration-300 aspect-square bg-cover bg-center
+                                             will-change-transform contain-paint
                                              ${index % 4 % 2 === 0 ? 'animate-infiniteScroll' : 'animate-infiniteScrollReverse'}`}
                                     style={{
-                                        backgroundImage: `url('/images/cities/${city.toLowerCase().replace(' ', '-')}.jpg')`,
-                                        willChange: 'transform',
+                                        backgroundImage: `url('/images/cities/${city.toLowerCase().replace(' ', '-')}.webp')`,
                                         transform: 'translateZ(0)'
                                     }}
                                 >
