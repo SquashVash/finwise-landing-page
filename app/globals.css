@@ -4,13 +4,12 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
-  --primary: #C2E7D9;
-  --secondary: #304fff;
-
-  --primary-accent: #94B3A2;
-  --foreground-accent: #454545;
-  --hero-background: #F3F3F5;
+  --foreground: #000000;
+  --primary: #3b82f6;
+  --secondary: #64748b;
+  --primary-accent: #1d4ed8;
+  --foreground-accent: #1f2937;
+  --hero-background: #f0f4ff;
 }
 
 html {
@@ -52,3 +51,5 @@ h1, h2, h3, h4, h5, h6 {
 .benefit-section:last-of-type > div {
   @apply mb-10;
 }
+
+/* Add any other global styles below */
