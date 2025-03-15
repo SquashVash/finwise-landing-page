@@ -30,7 +30,7 @@ const Header: React.FC = () => {
                             height={28}
                             className="min-w-fit transition-transform duration-300 group-hover:scale-110"
                         />
-                        <span className="manrope text-xl font-semibold text-foreground cursor-pointer group-hover:text-primary transition-colors">
+                        <span className="manrope text-xl font-semibold text-white cursor-pointer group-hover:text-gray-200 transition-colors">
                             {siteDetails.siteName}
                         </span>
                     </Link>
@@ -39,13 +39,13 @@ const Header: React.FC = () => {
                     <ul className="hidden md:flex space-x-6">
                         {menuItems.map(item => (
                             <li key={item.text}>
-                                <Link href={item.url} className="text-foreground hover:text-foreground-accent transition-colors font-bold">
+                                <Link href={item.url} className="text-white hover:text-gray-200 transition-colors font-bold text-lg">
                                     {item.text}
                                 </Link>
                             </li>
                         ))}
                         <li>
-                            <Link href="#cta" className="text-black bg-primary hover:bg-primary-accent px-8 py-3 rounded-full transition-colors font-bold">
+                            <Link href="#cta" className="text-white bg-primary hover:bg-primary-accent px-10 py-4 rounded-full transition-colors font-bold text-lg">
                                 Join The Waitlist
                             </Link>
                         </li>
@@ -56,7 +56,7 @@ const Header: React.FC = () => {
                         <button
                             onClick={toggleMenu}
                             type="button"
-                            className="bg-primary text-black focus:outline-none rounded-full w-10 h-10 flex items-center justify-center"
+                            className="bg-primary text-white focus:outline-none rounded-full w-10 h-10 flex items-center justify-center"
                             aria-controls="mobile-menu"
                             aria-expanded={isOpen}
                         >
@@ -85,13 +85,13 @@ const Header: React.FC = () => {
                     <ul className="flex flex-col space-y-4 pt-1 pb-6 px-6">
                         {menuItems.map(item => (
                             <li key={item.text}>
-                                <Link href={item.url} className="text-foreground hover:text-primary block font-bold" onClick={toggleMenu}>
+                                <Link href={item.url} className="text-white hover:text-gray-200 block font-bold text-lg" onClick={toggleMenu}>
                                     {item.text}
                                 </Link>
                             </li>
                         ))}
                         <li className="flex justify-center">
-                            <Link href="#cta" className="text-black bg-primary hover:bg-primary-accent px-5 py-2 rounded-full block w-fit font-bold" onClick={toggleMenu}>
+                            <Link href="#cta" className="text-white bg-primary hover:bg-primary-accent px-8 py-3 rounded-full block w-fit font-bold text-lg" onClick={toggleMenu}>
                                 Join The Waitlist
                             </Link>
                         </li>

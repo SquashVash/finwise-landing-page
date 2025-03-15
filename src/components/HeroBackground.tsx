@@ -13,16 +13,23 @@ const HeroBackground: React.FC = () => {
     return (
         <>
             <div className="absolute left-0 top-0 bottom-0 -z-10 w-full overflow-hidden">
+                <div className="absolute inset-0 bg-black/30 z-10"></div>
                 <div className="absolute inset-0 h-full w-full bg-[#f0f4ff]">
-                    <div className="relative w-[120%] left-1/2 -translate-x-[40%] rotate-[-6deg]">
-                        <div className="grid grid-cols-4 gap-4 overflow-hidden h-[400vh]">
-                            {[...cities, ...cities, ...cities, ...cities].map((city, index) => (
+                    <div className="relative w-[200%] sm:w-[140%] left-1/2 -translate-x-[40%] -translate-y-[5%] rotate-[-6deg]">
+                        <div className="grid grid-cols-4 gap-x-1 gap-y-1 sm:gap-x-2 sm:gap-y-2 md:gap-4 overflow-hidden h-[400vh]">
+                            {[...cities, ...cities].map((city, index) => (
                                 <div
                                     key={`scroll-${index}-${city}`}
-                                    className={`rounded-2xl border-2 border-gray-200 bg-white/60 
+                                    className={`rounded-2xl border-2 border-gray-200 
                                              flex items-center justify-center text-xl font-semibold 
-                                             text-gray-700 shadow-lg hover:bg-white/80 transition-all
-                                             duration-300 aspect-square ${index % 4 % 2 === 0 ? 'animate-infiniteScroll' : 'animate-infiniteScrollReverse'}`}
+                                             text-white shadow-lg hover:opacity-90 transition-opacity
+                                             duration-300 aspect-square bg-cover bg-center
+                                             will-change-transform contain-paint
+                                             ${index % 4 % 2 === 0 ? 'animate-infiniteScroll' : 'animate-infiniteScrollReverse'}`}
+                                    style={{
+                                        backgroundImage: `url('/images/cities/${city.toLowerCase().replace(' ', '-')}.jpg')`,
+                                        transform: 'translateZ(0)'
+                                    }}
                                 >
                                     {city}
                                 </div>
@@ -32,8 +39,7 @@ const HeroBackground: React.FC = () => {
                 </div>
             </div>
 
-            <div className="absolute left-0 right-0 bottom-0 backdrop-blur-[2px] h-40 bg-gradient-to-b from-transparent via-[rgba(233,238,255,0.5)] to-[rgba(202,208,230,0.5)]">
-            </div>
+        
         </>
     );
 };

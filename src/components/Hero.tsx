@@ -12,8 +12,8 @@ const Hero: React.FC = () => {
             <HeroBackground />
 
             <div className="text-center">
-                <h1 className="text-4xl md:text-6xl md:leading-tight font-bold text-foreground max-w-lg md:max-w-2xl mx-auto">{heroDetails.heading}</h1>
-                <p className="mt-4 text-foreground max-w-lg mx-auto">{heroDetails.subheading}</p>
+                <h1 className="text-6xl md:text-8xl md:leading-tight font-bold text-white max-w-2xl md:max-w-5xl mx-auto">{heroDetails.heading}</h1>
+                <p className="mt-4 text-xl text-white max-w-2xl mx-auto">{heroDetails.subheading}</p>
                 
                 <Image
                     src={heroDetails.centerImageSrc}

@@ -21,16 +21,16 @@ const config: Config = {
       keyframes: {
         infiniteScroll: {
           '0%': { transform: 'translateY(0%)' },
-          '100%': { transform: 'translateY(-100%)' }
+          '100%': { transform: 'translateY(-300%)' }
         },
         infiniteScrollReverse: {
-          '0%': { transform: 'translateY(-100%)' },
+          '0%': { transform: 'translateY(-300%)' },
           '100%': { transform: 'translateY(0%)' }
         },
       },
       animation: {
-        'infiniteScroll': 'infiniteScroll 20s linear infinite',
-        'infiniteScrollReverse': 'infiniteScrollReverse 20s linear infinite',
+        'infiniteScroll': 'infiniteScroll 20s ease-in-out infinite alternate',
+        'infiniteScrollReverse': 'infiniteScrollReverse 20s ease-in-out infinite alternate',
       },
     },    
   },
