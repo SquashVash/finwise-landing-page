@@ -85,7 +85,7 @@ const Header: React.FC = () => {
                     <ul className="flex flex-col space-y-4 pt-1 pb-6 px-6">
                         {menuItems.map(item => (
                             <li key={item.text}>
-                                <Link href={item.url} className="text-white hover:text-gray-200 block font-bold text-lg" onClick={toggleMenu}>
+                                <Link href={item.url} className="text-black hover:text-gray-600 block font-bold text-lg" onClick={toggleMenu}>
                                     {item.text}
                                 </Link>
                             </li>
